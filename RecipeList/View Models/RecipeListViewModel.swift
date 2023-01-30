@@ -28,7 +28,7 @@ class RecipeListViewModel: ObservableObject {
         } catch {
             print("Web service error: \(error)")
         }
-        print(recipeList)
+//        print(recipeList)
     }
         
         
@@ -49,5 +49,9 @@ struct RecipeViewModel: Identifiable {
     
     var imageUrl: URL? {
         URL(string: recipe.strMealThumb)
+    }
+    
+    var idMeal: String {
+        recipe.idMeal
     }
 }

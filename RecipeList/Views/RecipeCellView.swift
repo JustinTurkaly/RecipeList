@@ -22,6 +22,9 @@ struct RecipeCellView: View {
                         }
             
             Text(recipeCell.title)
-        }
+                .onTapGesture {
+//                    print("Tapped item with id: \(recipeCell.idMeal)")
+                }
+      }
     }
 }

@@ -21,11 +21,11 @@ class WebService {
         if (response as? HTTPURLResponse)?.statusCode != 200 {
             throw NetworkError.badRequest
         }
+//        print("Raw data: \(String(data: data, encoding: .utf8) ?? "")")
         
         guard let result = parse(data) else {
             throw NetworkError.decodingError
         }
-//        print("Raw data: \(String(data: data, encoding: .utf8) ?? "")")
 //        print(result)
         return result
     }
