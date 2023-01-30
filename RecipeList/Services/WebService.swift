@@ -12,7 +12,7 @@ enum NetworkError: Error {
     case decodingError
 }
 
-class Webservice {
+class WebService {
     
     func get<T: Decodable>(url: URL, parse: (Data) -> T?) async throws -> T {
         
@@ -25,6 +25,8 @@ class Webservice {
         guard let result = parse(data) else {
             throw NetworkError.decodingError
         }
+//        print("Raw data: \(String(data: data, encoding: .utf8) ?? "")")
+//        print(result)
         return result
     }
     

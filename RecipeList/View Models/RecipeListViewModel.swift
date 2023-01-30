@@ -11,37 +11,43 @@ import Foundation
 class RecipeListViewModel: ObservableObject {
     
     @Published var recipeList: [RecipeViewModel] = []
-     
+    
     func populateList() async {
         
         do {
-            let recipeListResponse = try await Webservice().get(url: Constants.Urls.recipeListUrl) {
-                data in
-                return try? JSONDecoder().decode(RecipeListResponse.self, from: data)
+            let recipeListResponse = try await WebService().get(url: Constants.Urls.recipeListUrl) { data in
+                do {
+//                    print(RecipeListResponse.self)
+                    return try JSONDecoder().decode(RecipeListResponse.self, from: data)
+                } catch {
+                    print("JSON decoding error: \(error)")
+                    return nil
+                }
             }
-            
             self.recipeList = recipeListResponse.meals.map(RecipeViewModel.init)
-            
         } catch {
-            print(error)
+            print("Web service error: \(error)")
         }
+        print(recipeList)
+    }
+        
+        
+        
+}
+struct RecipeViewModel: Identifiable {
+    
+    let id = UUID()
+    private let recipe: Recipe
+    
+    init(_ recipe: Recipe) {
+        self.recipe = recipe
     }
     
-    struct RecipeViewModel: Identifiable {
-        
-        let id = UUID()
-        private let meal: Meal
-        
-        init(_ meal: Meal) {
-            self.meal = meal
-        }
-        
-        var title: String {
-            meal.strMeal
-        }
-        
-        var imageUrl: URL? {
-            URL(string: meal.strMealThumb)
-        }
+    var title: String {
+        recipe.strMeal
+    }
+    
+    var imageUrl: URL? {
+        URL(string: recipe.strMealThumb)
     }
 }

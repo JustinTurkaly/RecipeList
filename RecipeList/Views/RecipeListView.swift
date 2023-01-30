@@ -9,13 +9,12 @@ import SwiftUI
 
 struct RecipeListView: View {
     
+    let recipes: [RecipeViewModel]
+    
     var body: some View {
-        Text("test")
+        List(recipes) { recipe in
+            RecipeCellView(recipeCell: recipe)
+        }
     }
 }
 
-struct RecipeListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeListView()
-    }
-}

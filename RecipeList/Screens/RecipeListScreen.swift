@@ -14,7 +14,11 @@ struct RecipeListScreen: View {
     
     var body: some View {
         NavigationView {
-            
+            RecipeListView(recipes: model.recipeList)
+                .task {
+                    await model.populateList()
+                }
+            .navigationTitle("Desserts")
         }
     }
 }
