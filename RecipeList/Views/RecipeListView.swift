@@ -12,9 +12,10 @@ struct RecipeListView: View {
     let recipes: [RecipeViewModel]
     
     var body: some View {
-        List(recipes) { recipe in
-            RecipeCellView(recipeCell: recipe)
+        List(recipes, id: \.id) { recipe in
+            NavigationLink(destination: RecipeDetailsScreen(recipeId: recipe.idMeal).navigationTitle(recipe.title)) {
+                RecipeCellView(recipeCell: recipe)
+            }
         }
     }
 }
-

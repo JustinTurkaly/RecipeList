@@ -10,12 +10,14 @@ import Foundation
 @MainActor
 class RecipeDetailsViewModel: ObservableObject {
     
+    
+    
     @Published var strMeal: String = ""
     @Published var strInstructions: String = ""
     @Published var strTags: String = ""
+    @Published var ingredientArray: [[IngredientViewModel]] = []
     
     func populateRecipeDetails(recipeId: String) async {
-        print(recipeId)
         do {
             let recipeDetailsResponse = try await WebService().get(url:
                 Constants.Urls.detailsById(recipeId)) { data in
@@ -28,10 +30,57 @@ class RecipeDetailsViewModel: ObservableObject {
                 }
             }
             let recipeDetails = recipeDetailsResponse.meals
-//            print(recipeDetails)
             self.strMeal = recipeDetails[0].strMeal
             self.strInstructions = recipeDetails[0].strInstructions
-            self.strTags = recipeDetails[0].strTags
+            
+            var i = 1
+            var j = 1
+            
+            var measurements = [String]()
+            var ingredients = [String]()
+            
+            let mirror = Mirror(reflecting: recipeDetails[0])
+//            print(mirror.children)
+                for child in mirror.children {
+                    let ing = "strIngredient\(i)"
+                    let measure = "strMeasure\(j)"
+//                    print("\(ing)--\(child.label)")
+                    if let label = child.label, label == ing {
+                        if let value = child.value as? String {
+                            ingredients.append(value)
+                            i+=1
+                          }
+                    }
+                    if let label = child.label, label == measure {
+                        if let value = child.value as? String {
+                            measurements.append(value)
+                            j+=1
+                          }
+                    }
+                }
+//            print(ingredients)
+//            print(measurements)
+//
+            var k = 0
+            while (k < 10) {
+//                print("\(ingredients[k])----\(measurements[k])")
+                addIngredient(ingredientName: ingredients[k], ingredientMeasurement: measurements[k])
+                k += 1
+            }
+//            self.ingredientArray = result
+            print(ingredientArray)
+            
+            
+            
+            func addIngredient(ingredientName: String, ingredientMeasurement: String) {
+                   let ingredient = IngredientViewModel(name: ingredientName, measurement: ingredientMeasurement)
+                   if var innerArray = ingredientArray.last {
+                       innerArray.append(ingredient)
+                       ingredientArray[ingredientArray.count - 1] = innerArray
+                   } else {
+                       ingredientArray.append([ingredient])
+                   }
+               }
             
         } catch {
             print(error)
@@ -39,4 +88,10 @@ class RecipeDetailsViewModel: ObservableObject {
         
     }
     
+}
+
+struct IngredientViewModel: Identifiable {
+    let id = UUID()
+    let name: String
+    let measurement: String
 }

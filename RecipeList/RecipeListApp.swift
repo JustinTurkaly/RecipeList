@@ -11,7 +11,8 @@ import SwiftUI
 struct RecipeListApp: App {
     var body: some Scene {
         WindowGroup {
-            RecipeDetailsScreen(recipeId: "52772")
+            RecipeListScreen()
+//            RecipeDetailsScreen(recipeId: "53049")
         }
     }
 }
