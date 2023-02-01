@@ -34,8 +34,8 @@ struct RecipeDetailsScreen: View {
                     .task {
                         await recipeDetailsVM.populateRecipeDetails(recipeId: recipeId)
                     }
-                    .navigationTitle(recipeDetailsVM.strMeal)
             }
+            .accessibilityIdentifier("navigationTitle")
         }
         
     }

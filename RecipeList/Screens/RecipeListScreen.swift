@@ -18,8 +18,8 @@ struct RecipeListScreen: View {
                 .task {
                     await model.populateList()
                 }
-            .navigationTitle("Desserts")
         }
+        .navigationTitle("Desserts")
     }
 }
 

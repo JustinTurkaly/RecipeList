@@ -38,6 +38,7 @@ class RecipeDetailsViewModel: ObservableObject {
             
             var measurements = [String]()
             var ingredients = [String]()
+            var maxLength: Int = 0
             
             let mirror = Mirror(reflecting: recipeDetails[0])
 //            print(mirror.children)
@@ -47,14 +48,19 @@ class RecipeDetailsViewModel: ObservableObject {
 //                    print("\(ing)--\(child.label)")
                     if let label = child.label, label == ing {
                         if let value = child.value as? String {
-                            ingredients.append(value)
-                            i+=1
+                            if (!value.isEmpty) {
+                                ingredients.append(value)
+                                i+=1
+                            }
+                            maxLength = ingredients.count
                           }
                     }
                     if let label = child.label, label == measure {
                         if let value = child.value as? String {
-                            measurements.append(value)
-                            j+=1
+                            if (!value.isEmpty) {
+                                measurements.append(value)
+                                j+=1
+                            }
                           }
                     }
                 }
@@ -62,7 +68,7 @@ class RecipeDetailsViewModel: ObservableObject {
 //            print(measurements)
 //
             var k = 0
-            while (k < 10) {
+            while (k < maxLength) {
 //                print("\(ingredients[k])----\(measurements[k])")
                 addIngredient(ingredientName: ingredients[k], ingredientMeasurement: measurements[k])
                 k += 1
