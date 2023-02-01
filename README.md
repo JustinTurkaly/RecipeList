@@ -13,7 +13,7 @@ A simple iOS app that displays a list of recipes and allows you to view more inf
 - Swift 5.0+
 
 ## Getting Started
-1. Clone this repository ($ git clone https://github.com/JustinTurkaly/RecipeList.git)
+1. Clone this repository ```$ git clone https://github.com/JustinTurkaly/RecipeList.git```
 2. Open the project in Xcode
 3. Build and run the project on a simulator or a device
 
