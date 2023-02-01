@@ -7,102 +7,76 @@
 
 import XCTest
 
-@MainActor
 final class RecipeListApp_UITests: XCTestCase {
     
+    //initialize app
     let app = XCUIApplication()
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         app.launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
+    
+    //Tests page navigation
     func test_RecipeListApp_listElement_shouldNavigatePage() {
-        //Given
-        
-//        let title: String = "Apam balik"
-//        let homeScreen = app.collectionViews
-        
-        //When
-        
-//        homeScreen.buttons["Apam balik"].tap()
-        
-        let button = app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Apam balik"]/*[[".cells.buttons[\"Apam balik\"]",".buttons[\"Apam balik\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        let exists = NSPredicate(format: "exists == true")
+                
+        let title = "Apam balik"
+        let button = app.collectionViews.buttons[title]
 
+        let exists = NSPredicate(format: "exists == true")
         expectation(for: exists, evaluatedWith: button, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
-
         button.tap()
-
-//        let navBar = app.navigationBars["Desserts"]
-//        let navigationTitle = app.navigationBars["Desserts"]
-//        let navigationTitle = app.navigationBars.element(boundBy: 0).title
-//        XCTAssertEqual(navigationTitle, "Apam balik")
-        //Then
-        let navigationTitle = app.navigationBars.firstMatch.staticTexts["navigationTitle"]
-        let exists2 = NSPredicate(format: "exists == true")
-
-        // Wait for the navigation title to exist
-        expectation(for: exists2, evaluatedWith: navigationTitle, handler: nil)
-//        waitForExpectations(timeout: 5, handler: nil)
-
-        XCTAssertTrue(navigationTitle.exists)
         
-        
-        
-
-//        XCTAssertTrue(navTitle.exists)
-
-        
-//        let app = XCUIApplication()
-//        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Bakewell tart"]/*[[".cells.buttons[\"Bakewell tart\"]",".buttons[\"Bakewell tart\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        app.navigationBars.containing(.button, identifier:"Back").staticTexts["Bakewell tart"].tap()
-
-        
-        
-//        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Apam balik"]/*[[".cells.buttons[\"Apam balik\"]",".buttons[\"Apam balik\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        app.navigationBars["Apam balik"].staticTexts["Apam balik"].tap()
-        
+        let navigationTitle = app.navigationBars[title]
+        XCTAssert(navigationTitle.waitForExistence(timeout: 5))
     }
     
     
-    
-    func test_RecipeListApp_listElement_shouldNavigatePage1() {
+    //Tests instructions rendered
+    func test_RecipeListApp_instructions_shouldExist() {
+                
+        let title = "Apam balik"
+        let instructions = "Mix milk, oil and egg together. Sift flour, baking powder and salt into the mixture. Stir well until all ingredients are combined evenly.\r\n\r\nSpread some batter onto the pan. Spread a thin layer of batter to the side of the pan. Cover the pan for 30-60 seconds until small air bubbles appear.\r\n\r\nAdd butter, cream corn, crushed peanuts and sugar onto the pancake. Fold the pancake into half once the bottom surface is browned.\r\n\r\nCut into wedges and best eaten when it is warm."
+        let predicate = NSPredicate(format: "label LIKE %@", instructions)
         
-//        let recipeCellImage = app.images["recipeCellImage-53049"]
-//        let firstCell = app.tables.cells.element.firstMatch
+        let button = app.collectionViews.buttons[title]
 
-
-
-//        app.swipeUp()
-        
-       
-
-//
-//        recipeCellImage.tap()
-//
-        
-        let image = app.images["recipeCellImage-53049"]
         let exists = NSPredicate(format: "exists == true")
-
-        expectation(for: exists, evaluatedWith: image, handler: nil)
-        waitForExpectations(timeout: 10, handler: nil)
-        XCTAssert(image.exists)
-
-        image.press(forDuration: 3)
-                XCTAssert(app.navigationBars.firstMatch.staticTexts["navigationTitle"].waitForExistence(timeout: 5))
-//
-//        XCTAssert(app.navigationBars.firstMatch.staticTexts["navigationTitle"].waitForExistence(timeout: 5))
+        expectation(for: exists, evaluatedWith: button, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        button.tap()
         
+        let instructionsView = app.scrollViews["instructions"].otherElements.staticTexts.element(matching: predicate)
+        XCTAssert(instructionsView.waitForExistence(timeout: 5))
+    }
+    
+    
+    //Tests ingredients rendered
+    func test_RecipeListApp_ingredients_shouldExist() {
+                
+        let title = "Apam balik"
+        let button = app.collectionViews.buttons[title]
+
+        let exists = NSPredicate(format: "exists == true")
+        expectation(for: exists, evaluatedWith: button, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        button.tap()
+        
+        let ingredientsView = app.collectionViews
+        let ing1 = ingredientsView.staticTexts["Milk"]
+        let ing2 = ingredientsView.staticTexts["Oil"]
+        let ing3 = ingredientsView.staticTexts["Eggs"]
+        let measure1 = ingredientsView.staticTexts["200ml"]
+        let measure2 = ingredientsView.staticTexts["60ml"]
+        let measure3 = ingredientsView.staticTexts["2"]
+        
+        XCTAssert(ing1.waitForExistence(timeout: 5))
+        XCTAssert(ing2.waitForExistence(timeout: 5))
+        XCTAssert(ing3.waitForExistence(timeout: 5))
+        XCTAssert(measure1.waitForExistence(timeout: 5))
+        XCTAssert(measure2.waitForExistence(timeout: 5))
+        XCTAssert(measure3.waitForExistence(timeout: 5))
     }
 }

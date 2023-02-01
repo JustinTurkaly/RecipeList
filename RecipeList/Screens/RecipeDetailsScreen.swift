@@ -12,37 +12,22 @@ struct RecipeDetailsScreen: View {
     let recipeId: String
     @StateObject private var recipeDetailsVM = RecipeDetailsViewModel()
     
-    
-    let bounds = UIScreen.main.bounds
-    
     var body: some View {
         NavigationView {
             VStack {
                 let flattenedArray = recipeDetailsVM.ingredientArray.flatMap { $0 }
                 IngredientListView(ingredients: flattenedArray)
-                //            ForEach(recipeDetailsVM.ingredientArray.flatMap { $0 }, id: \.id) { ingredient in
-                //                Text("\(ingredient.name) \(ingredient.measurement)")
-                //            }
                 ScrollView {
-                    Text(recipeDetailsVM.strInstructions)
-                    
+                    Text(recipeDetailsVM.formatInstructions(instructions: recipeDetailsVM.strInstructions))
+                        .padding([.leading, .trailing], 20)
                 }
-                
-                //        List(recipeDetailsVM.ingredientArray) { ingredien in
-                //            Text(ingredien)
-                //        }
                     .task {
                         await recipeDetailsVM.populateRecipeDetails(recipeId: recipeId)
                     }
+                    .accessibilityIdentifier("instructions")
             }
-            .accessibilityIdentifier("navigationTitle")
+            .navigationTitle(recipeDetailsVM.strMeal)
         }
-        
     }
 }
 
-struct RecipeDetailsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeDetailsScreen(recipeId: "52772")
-    }
-}

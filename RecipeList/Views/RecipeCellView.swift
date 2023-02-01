@@ -21,9 +21,8 @@ struct RecipeCellView: View {
                             ProgressView()
                         }
             Text(recipeCell.title)
-                .onTapGesture {
-//                    print("Tapped item with id: \(recipeCell.idMeal)")
-                }
+                .alignmentGuide(.top) { d in d[.top] }
+                
       }
     }
 }

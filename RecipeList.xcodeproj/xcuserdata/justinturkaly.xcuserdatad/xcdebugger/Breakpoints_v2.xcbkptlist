@@ -7,147 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D0F9DF14-0BE7-4BFA-842A-61512D282AB1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RecipeList_UITests/RecipeListApp_UITests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "test_RecipeListApp_listElement_shouldNavigatePage()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D0F9DF14-0BE7-4BFA-842A-61512D282AB1 - 6d8a6343df54f27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
-                  moduleName = "RecipeList_UITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "284">
-               </Location>
-               <Location
-                  uuid = "D0F9DF14-0BE7-4BFA-842A-61512D282AB1 - 6d8a6343df54f27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
-                  moduleName = "RecipeList_UITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  uuid = "D0F9DF14-0BE7-4BFA-842A-61512D282AB1 - 6d8a6343df54f27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
-                  moduleName = "RecipeList_UITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "D0F9DF14-0BE7-4BFA-842A-61512D282AB1 - 6d8a6343df54f27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
-                  moduleName = "RecipeList_UITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "272">
-               </Location>
-               <Location
-                  uuid = "D0F9DF14-0BE7-4BFA-842A-61512D282AB1 - 6d8a6343df54f27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
-                  moduleName = "RecipeList_UITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "264">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A9D2AA5-237D-456A-ACC3-11E718ACB9E9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RecipeList_UITests/RecipeListApp_UITests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "test_RecipeListApp_listElement_shouldNavigatePage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "141729F3-0530-4A5E-8698-D0AAAC0FCC89"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RecipeList_UITests/RecipeListApp_UITests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "test_RecipeListApp_listElement_shouldNavigatePage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "81934A17-3DDA-4BD1-88B3-D6451C7FA5F4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RecipeList_UITests/RecipeListApp_UITests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "test_RecipeListApp_listElement_shouldNavigatePage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -155,9 +14,9 @@
             filePath = "RecipeList_UITests/RecipeListApp_UITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "test_RecipeListApp_listElement_shouldNavigatePage1()"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "test_RecipeListApp_listElement_shouldNavigatePage()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -204,6 +63,111 @@
                   startingLineNumber = "95"
                   endingLineNumber = "95"
                   offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 3867224608e7b856"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage1() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 3867224608e7b856"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage1() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 3867224608e7b856"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage1() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 3867224608e7bae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage1() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 3867224608e7bae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage1() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 6d8a6343df54e8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "A5EEE74B-2D4E-4845-A148-47296801BA68 - 6d8a6343df54dd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipeList_UITests.RecipeListApp_UITests.test_RecipeListApp_listElement_shouldNavigatePage() -&gt; ()"
+                  moduleName = "RecipeList_UITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/justinturkaly/Desktop/ios/RecipeList/RecipeList_UITests/RecipeListApp_UITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
          </BreakpointContent>

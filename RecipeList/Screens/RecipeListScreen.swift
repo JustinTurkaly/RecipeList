@@ -22,9 +22,3 @@ struct RecipeListScreen: View {
         .navigationTitle("Desserts")
     }
 }
-
-struct RecipeListScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeListScreen()
-    }
-}

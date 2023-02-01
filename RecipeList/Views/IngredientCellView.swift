@@ -12,11 +12,9 @@ struct IngredientCellView: View {
     let ingredientCell: IngredientViewModel
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack {
             Text(ingredientCell.name)
-                .onTapGesture {
-//                    print("Tapped item with id: \(recipeCell.idMeal)")
-                }
+            Text("-")
             Text(ingredientCell.measurement)
       }
     }

@@ -14,7 +14,7 @@ struct RecipeListView: View {
     var body: some View {
         List(recipes, id: \.id) { recipe in
             NavigationLink(destination: RecipeDetailsScreen(recipeId: recipe.idMeal)) {
-                RecipeCellView(recipeCell: recipe).accessibilityIdentifier("recipeCellImage-\(recipe.idMeal)")
+                RecipeCellView(recipeCell: recipe)
             }
         }
     }

@@ -12,7 +12,6 @@ struct RecipeListApp: App {
     var body: some Scene {
         WindowGroup {
             RecipeListScreen()
-//            RecipeDetailsScreen(recipeId: "53049")
         }
     }
 }

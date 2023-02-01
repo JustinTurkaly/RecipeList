@@ -26,7 +26,6 @@ class WebService {
         guard let result = parse(data) else {
             throw NetworkError.decodingError
         }
-//        print(result)
         return result
     }
     

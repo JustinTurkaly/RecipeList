@@ -17,18 +17,18 @@ class RecipeListViewModel: ObservableObject {
         do {
             let recipeListResponse = try await WebService().get(url: Constants.Urls.recipeListUrl) { data in
                 do {
-//                    print(RecipeListResponse.self)
                     return try JSONDecoder().decode(RecipeListResponse.self, from: data)
                 } catch {
                     print("JSON decoding error: \(error)")
                     return nil
                 }
             }
-            self.recipeList = recipeListResponse.meals.map(RecipeViewModel.init)
+            self.recipeList = recipeListResponse.meals.map(RecipeViewModel.init).sorted {
+                $0.title < $1.title
+            }
         } catch {
             print("Web service error: \(error)")
         }
-//        print(recipeList)
     }
         
         

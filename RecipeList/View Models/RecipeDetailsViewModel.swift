@@ -22,7 +22,6 @@ class RecipeDetailsViewModel: ObservableObject {
             let recipeDetailsResponse = try await WebService().get(url:
                 Constants.Urls.detailsById(recipeId)) { data in
                 do {
-//                    print(RecipeListResponse.self)
                     return try JSONDecoder().decode(RecipeDetailsResponse.self, from: data)
                 } catch {
                     print("JSON decoding error: \(error)")
@@ -41,11 +40,9 @@ class RecipeDetailsViewModel: ObservableObject {
             var maxLength: Int = 0
             
             let mirror = Mirror(reflecting: recipeDetails[0])
-//            print(mirror.children)
                 for child in mirror.children {
                     let ing = "strIngredient\(i)"
                     let measure = "strMeasure\(j)"
-//                    print("\(ing)--\(child.label)")
                     if let label = child.label, label == ing {
                         if let value = child.value as? String {
                             if (!value.isEmpty) {
@@ -64,19 +61,12 @@ class RecipeDetailsViewModel: ObservableObject {
                           }
                     }
                 }
-//            print(ingredients)
-//            print(measurements)
-//
+            
             var k = 0
             while (k < maxLength) {
-//                print("\(ingredients[k])----\(measurements[k])")
                 addIngredient(ingredientName: ingredients[k], ingredientMeasurement: measurements[k])
                 k += 1
             }
-//            self.ingredientArray = result
-            print(ingredientArray)
-            
-            
             
             func addIngredient(ingredientName: String, ingredientMeasurement: String) {
                    let ingredient = IngredientViewModel(name: ingredientName, measurement: ingredientMeasurement)
@@ -91,9 +81,18 @@ class RecipeDetailsViewModel: ObservableObject {
         } catch {
             print(error)
         }
-        
     }
     
+    func formatInstructions(instructions: String) -> String {
+        let lines = instructions.split(separator: "\r\n\r\n")
+        
+        var numberedString: String = ""
+        for (index, line) in lines.enumerated() {
+            numberedString += "\(index + 1). \(line)\r\n\r\n"
+        }
+        
+        return numberedString
+    }
 }
 
 struct IngredientViewModel: Identifiable {
