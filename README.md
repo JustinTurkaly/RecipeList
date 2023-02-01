@@ -21,4 +21,4 @@ A simple iOS app that displays a list of recipes and allows you to view more inf
 Justin Turkaly
 
 ## Acknowledgements
-- [TheMealDB](https://www.themealdb.com/api.php)
+- [TheMealDB API](https://www.themealdb.com/api.php)
